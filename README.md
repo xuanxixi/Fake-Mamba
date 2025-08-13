@@ -3,7 +3,7 @@
 
 ### **Xi Xuan**, **Zimo Zhu**, **Wenxin Zhang**, **Yi-Cheng Lin**, **Tomi Kinnunen**
 
-> 🔊 *Detecting synthetic speech in real time — without attention.*
+> 🔊 *Detecting synthetic speech in real time — without self-attention.*
 
 ---
 
