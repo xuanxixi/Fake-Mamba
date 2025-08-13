@@ -9,9 +9,9 @@
 
 ## 📘 Abstract
 
-Advances in neural speech synthesis pose growing security risks, driving the need for efficient and accurate deepfake detection. In this work, we investigate whether **bidirectional Mamba** can serve as a competitive alternative to Self-Attention in detecting synthetic speech.
+Advances in speech synthesis intensify security threats, motivating real-time deepfake detection research. In this work, we investigate whether **bidirectional Mamba** can serve as a competitive alternative to Self-Attention in detecting synthetic speech.
 
-We propose **Fake-Mamba**, a novel framework that combines the pretrained **XLSR** front-end with **bidirectional Mamba blocks** to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, PN-BiMamba can effectively capture the subtle cues of synthetic speech.
+We propose **Fake-Mamba**, a novel framework that combines the pretrained XLSR front-end with bidirectional Mamba blocks to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, **PN-BiMamba** can effectively capture the subtle cues of synthetic speech.
 
 Evaluated on benchmark datasets, Fake-Mamba sets new state-of-the-art results:
 - 📉 **0.97% EER** on ASVspoof2021 LA
