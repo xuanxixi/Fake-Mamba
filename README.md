@@ -1,9 +1,44 @@
-# Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention’s Alternative
-(Accepeted at ASRU 2025 🇺🇸 🌴)
-### Xi Xuan, Zimo Zhu, Wenxin Zhang, Yi-Cheng Lin, Tomi Kinnunen
-In our paper, we proposed Fake-Mamba.
+# Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention’s Alternative  
+*(Accepted at [ASRU 2025](https://asru2025.org) 🇺🇸 🌴)*
 
-**Abstract:** 
-Advances in speech synthesis intensify security threats, motivating real-time deepfake detection research. We investigate whether bidirectional Mamba can serve as a competitive alternative to Self-Attention in detecting synthetic speech. Our solution, Fake-Mamba, integrates an XLSR front-end with bidirectional Mamba to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, PN-BiMamba can effectively capture the subtle cues of synthetic speech. Evaluated on ASVspoof 21 LA, 21 DF, and In-The-Wild benchmarks, Fake-Mamba achieves 0.97%, 1.74%, and 5.85% EER, respectively, representing substantial relative gains over SOTA models XLSR-Conformer and XLSR-Mamba. The framework maintains real-time inference across utterance lengths, demonstrating strong generalization and practical viability.
+### **Xi Xuan**, **Zimo Zhu**, **Wenxin Zhang**, **Yi-Cheng Lin**, **Tomi Kinnunen**
 
-This source code is for the Fake-Mamba accepted by ASRU 2025.
+> 🔊 *Detecting synthetic speech in real time — without attention.*
+
+---
+
+## 📘 Abstract
+
+Advances in neural speech synthesis pose growing security risks, driving the need for efficient and accurate deepfake detection. In this work, we investigate whether **bidirectional Mamba** can serve as a competitive alternative to Self-Attention in detecting synthetic speech.
+
+We propose **Fake-Mamba**, a novel framework that combines the pretrained **XLSR** front-end with **bidirectional Mamba blocks** to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, PN-BiMamba can effectively capture the subtle cues of synthetic speech.
+
+Evaluated on benchmark datasets, Fake-Mamba sets new state-of-the-art results:
+- 📉 **0.97% EER** on ASVspoof2021 LA
+- 📉 **1.74% EER** on ASVspoof2021 DF
+- 📉 **5.85% EER** on In-The-Wild (ITW)
+
+These results represent significant improvements over prior SOTA models such as XLSR-Conformer and XLSR-Mamba, while maintaining **real-time inference** across variable-length utterances. Fake-Mamba demonstrates strong generalization and practical deployment potential.
+
+---
+
+## 💻 Code & Reproducibility
+
+This repository contains the official implementation of **Fake-Mamba**, accepted at **ASRU 2025**.
+
+🔧 **Framework**:  
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org)
+[![Fairseq](https://img.shields.io/badge/Fairseq-%23007FFF.svg?logo=Facebook&logoColor=white)](https://github.com/facebookresearch/fairseq)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-%23FFD100.svg?logo=Hugging%20Face&logoColor=black)](https://huggingface.co)
+[![Mamba-SSM](https://img.shields.io/badge/Mamba--SSM-%23000000.svg?logo=github&logoColor=white)](https://github.com/state-spaces/mamba)
+
+📦 Includes: Training scripts, inference pipeline, pretrained models, and evaluation tools.
+
+👉 [Get Started: `README.md`](./README.md) | 📂 [Model Checkpoints](./checkpoints/) | 📈 [Training](./logs/)
+
+
+## 📚 Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
