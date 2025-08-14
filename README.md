@@ -1,11 +1,12 @@
 # Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention’s Alternative  
 *(Accepted at [ASRU 2025](https://2025.ieeeasru.org/) 🇺🇸 🌴)*
 
+[![arXiv](https://img.shields.io/badge/arXiv-2508.09294v1-b31b1b.svg)](https://arxiv.org/abs/2508.09294v1)
+
 ### **Xi Xuan**, **Zimo Zhu**, **Wenxin Zhang**, **Yi-Cheng Lin**, **Tomi Kinnunen**
 
 > 🔊 *Detecting synthetic speech in real time — without self-attention.*
 
----
 
 ## 📘 Abstract
 
