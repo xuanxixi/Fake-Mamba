@@ -39,6 +39,12 @@ This repository contains the official implementation of **Fake-Mamba**, accepted
 
 
 ## 📚 Citation
+@article{xuan2025fake,
+  title={Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention's Alternative},
+  author={Xuan, Xi and Zhu, Zimo and Zhang, Wenxin and Lin, Yi-Cheng and Kinnunen, Tomi},
+  journal={arXiv preprint arXiv:2508.09294},
+  year={2025}
+}
 
 If you find this work useful, please cite our paper:
 
