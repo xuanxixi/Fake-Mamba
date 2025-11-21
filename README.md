@@ -1,21 +1,37 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/-Fake--Mamba-informational?style=flat&logo=github&color=blueviolet" alt="Project Title Badge"/>
-</p>
+# Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention’s Alternative  
+(Accepted at [ASRU 2025](https://2025.ieeeasru.org/) 🇺🇸 🌴)
 
-# 🎤 Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention Alternative
+[![arXiv](https://img.shields.io/badge/arXiv-2508.09294v1-b31b1b.svg)](https://arxiv.org/abs/2508.09294v1)
 
-Official release of pretrained models and scripts for "Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention Alternative"
+### **Xi Xuan**, **Zimo Zhu**, **Wenxin Zhang**, **Yi-Cheng Lin**, **Tomi Kinnunen**
 
-> **Authors:**  
-**Xi Xuan<sup>1, *</sup>**, Zimo Zhu<sup>2</sup>, Wenxin Zhang<sup>3,4</sup>, Yi-Cheng Lin<sup>5</sup>, Tomi Kinnunen<sup>1</sup>
+> 🔊 *Detecting synthetic speech in real time — without self-attention.*
 
-<sup>1</sup> School of Computing, University of Eastern Finland, Finland  
-<sup>2</sup> Department of Statistics and Applied Probability, University of California Santa Barbara, USA  
-<sup>3</sup> School of Computer Science and Technology, University of Chinese Academy of Sciences, China  
-<sup>4</sup> Department of Mathematics, University of Toronto, Canada  
-<sup>5</sup> Graduate Institute of Communication Engineering, National Taiwan University, Taiwan  
 
-📧 Corresponding author: [xi.xuan@uef.fi](mailto:xi.xuan@uef.fi)
+## 📘 Abstract
+
+Advances in speech synthesis intensify security threats, motivating real-time deepfake detection research. In this work, we investigate whether **bidirectional Mamba** can serve as a competitive alternative to Self-Attention in detecting synthetic speech.
+
+We propose **Fake-Mamba**, a novel framework that combines the pretrained XLSR front-end with bidirectional Mamba blocks to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, **PN-BiMamba** can effectively capture the subtle cues of synthetic speech.
+
+Evaluated on benchmark datasets, Fake-Mamba sets new state-of-the-art results:
+- 📉 **0.97% EER** on ASVspoof2021 LA
+- 📉 **1.74% EER** on ASVspoof2021 DF
+- 📉 **5.85% EER** on In-The-Wild (ITW)
+
+These results represent significant improvements over prior SOTA models such as XLSR-Conformer and XLSR-Mamba, while maintaining **real-time inference** across variable-length utterances. Fake-Mamba demonstrates strong generalization and practical deployment potential.
+
+---
+
+## 💻 Getting Started
+
+This repository contains the official implementation of **Fake-Mamba**, accepted at **ASRU 2025**.
+
+🔧 **Framework**:  
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org)
+[![Fairseq](https://img.shields.io/badge/Fairseq-%23007FFF.svg?logo=Facebook&logoColor=white)](https://github.com/facebookresearch/fairseq)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-%23FFD100.svg?logo=Hugging%20Face&logoColor=black)](https://huggingface.co)
+[![Mamba-SSM](https://img.shields.io/badge/Mamba--SSM-%23000000.svg?logo=github&logoColor=white)](https://github.com/state-spaces/mamba)
 
 ---
 
@@ -33,7 +49,6 @@ $ pip install --editable ./
 $ cd ..
 $ pip install -r requirements.txt
 ```
-
 
 ## Experiments
 
@@ -77,7 +92,6 @@ CUDA_VISIBLE_DEVICES=0 python main.py   --track=LA --is_eval --eval
                                         --eval_output=/path/to/your/scores_LA.txt
 
 ```
-We will provide pre-trained model in huggingface.
 
 
 Compute the EER(%) use three 'scores.txt' file
@@ -97,3 +111,17 @@ python SITW-DF_test.py
 | In-the-Wild                 | 5.85    |
 
 
+
+
+## 📚 Citation
+
+If you find this work useful, please cite our paper:
+
+```
+@inproceedings{xuan2025fakemamba,
+  title        = {Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention's Alternative},
+  author       = {Xuan, Xi and Zhu, Zimo and Zhang, Wenxin and Lin, Yi-Cheng and Kinnunen, Tomi},
+  booktitle    = {Proceedings of the IEEE ASRU},
+  year         = {2025}
+}
+```
