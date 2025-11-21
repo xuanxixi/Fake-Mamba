@@ -171,46 +171,6 @@ class Fake_Mamba(nn.Module):
 
 
 
-        #out = self.fc5(x_pooled)  # (B, 144) -> (B, 2)
-
-        #===========================Var Len=======================================
-        # nUtterances = len(x)
-        # output = torch.zeros(nUtterances, 2).to(self.device)
-        # for n, feat in enumerate(x):
-        #     # print("feat",feat.shape)#[1,seq_len]
-        #     if isinstance(feat, np.ndarray):
-        #         input_x = torch.from_numpy(feat).float().to(self.device)
-        #     else:
-        #         input_x = feat.float().to(self.device)
-            
-        #     # input_x = torch.from_numpy(feat[:, :]).float().to(self.device)
-        #     # Step 1: Extract features using SSL (e.g., Wav2Vec 2.0)
-        #     x_ssl_feat = self.ssl_model.extract_feat(input_x.squeeze(-1))  # (B, T, 1024)
-
-        #     # Step 2: Apply linear layer to reduce feature dimension
-        #     x = self.LL(x_ssl_feat)  # (B, T, emb_size) -> (B, T, 144)
-
-        #     # Step 3: Preprocess features for encoder
-        #     x = x.unsqueeze(dim=1)  # Add channel dimension -> (B, 1, T, 144)
-        #     x = self.first_bn(x)
-        #     x = self.selu(x)
-        #     x = x.squeeze(dim=1)  # Remove channel dimension -> (B, T, 144)
-
-        #     # Step 4: Pass through BiMamba encoder
-        #     x = self.encoder(x)  # (B, T, 144)
-
-        #     # Step 5: Attention pooling along the time dimension
-        #     attention_weights = F.softmax(self.attention_pool(x), dim=1)  # Compute weights along time dimension -> (B, T, 1)
-        #     x_pooled = torch.matmul(
-        #         attention_weights.transpose(-1, -2), x
-        #     ).squeeze(-2)  # Weighted sum along time dimension -> (B, 144)
-
-        #     # Step 6: Classification head
-        #     out = self.fc5(x_pooled)  # (B, 144) -> (B, 2)
-
-        # return out
-
-
 class XLSR_Transformer(nn.Module):
     def __init__(self, args, device):
         super().__init__()

@@ -538,7 +538,8 @@ if __name__ == '__main__':
     print('Device: {}'.format(device))
     
 
-    model = XLSR_BiMamba_FFN_Model(args,device)
+    model = Fake_Mamba(args,device)
+
     
 
     
